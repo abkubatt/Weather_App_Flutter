@@ -1,3 +1,5 @@
+import 'package:weather_app/utilites/constants.dart';
+
 class WeatherForecast {
   late City city;
   late String cod;
@@ -125,7 +127,7 @@ class WeatherList {
       required this.clouds,
       required this.rain});
 
- WeatherList.fromJson(Map<String, dynamic> json) {
+  WeatherList.fromJson(Map<String, dynamic> json) {
     dt = json['dt'];
     sunrise = json['sunrise'];
     sunset = json['sunset'];
@@ -168,6 +170,10 @@ class WeatherList {
     data['clouds'] = this.clouds;
     data['rain'] = this.rain;
     return data;
+  }
+
+  String getIconUrl() {
+    return Constants.WEATHER_IMAGES_URL + weather[0].icon + '.png';
   }
 }
 

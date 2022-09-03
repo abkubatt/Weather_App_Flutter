@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather_app/models/weather_forecast_daily.dart';
 import 'package:weather_app/widgets/city_view.dart';
+import 'package:weather_app/widgets/detail_view.dart';
+import 'package:weather_app/widgets/temp_view.dart';
 
 import '../api/weather_api.dart';
 
@@ -55,6 +57,10 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
                   children: [
                     SizedBox(height: 50),
                     CityView(snapshot: snapshot),
+                    SizedBox(height: 50),
+                    TempView(snapshot: snapshot),
+                    SizedBox(height: 50),
+                    DetailView(snapshot: snapshot),
                   ],
                 );
               } else {

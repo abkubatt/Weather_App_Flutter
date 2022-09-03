@@ -6,3 +6,6 @@ class Constants {
   static const String WEATHER_IMAGES_PATH = '/img/w/';
   static const String WEATHER_IMAGES_URL = WEATHER_BASE_SCHEME + WEATHER_BASE_URL_DOMAIN + WEATHER_IMAGES_PATH;
 }
+
+
+
